@@ -10,6 +10,14 @@ import { ProfileSettings } from "@/components/public/ProfileSettings";
 import { AppSettings } from "@/components/public/AppSettings";
 import ComplianceReports from "@/components/compliance/ComplianceReports";
 import { TeamManagement } from "@/components/compliance/TeamManagement";
+import { IntentRegistrationComplianceReview } from "@/components/compliance/IntentRegistrationComplianceReview";
+import { PermitRenewalComplianceReview } from "@/components/compliance/PermitRenewalComplianceReview";
+import { PermitTransferComplianceReview } from "@/components/compliance/PermitTransferComplianceReview";
+import { PermitSurrenderComplianceReview } from "@/components/compliance/PermitSurrenderComplianceReview";
+import { PermitAmendmentComplianceReview } from "@/components/compliance/PermitAmendmentComplianceReview";
+import { PermitAmalgamationComplianceReview } from "@/components/compliance/PermitAmalgamationComplianceReview";
+import { PermitComplianceReportReview } from "@/components/compliance/PermitComplianceReportReview";
+import { PermitEnforcementComplianceReview } from "@/components/compliance/PermitEnforcementComplianceReview";
 import { Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -55,15 +63,15 @@ const ComplianceDashboardView = () => {
             {activeTab === 'reports' && <ComplianceReports />}
             {activeTab === 'profile' && <ProfileSettings />}
             {activeTab === 'settings' && <AppSettings />}
-            {/* Placeholder views for new assessment submenus */}
-            {activeTab === 'intent-reviews' && <div className="text-muted-foreground">Intent Application Review - Coming Soon</div>}
-            {activeTab === 'permit-amalgamation' && <div className="text-muted-foreground">Permit Amalgamation - Coming Soon</div>}
-            {activeTab === 'permit-amendments' && <div className="text-muted-foreground">Permit Amendments - Coming Soon</div>}
-            {activeTab === 'permit-compliance' && <div className="text-muted-foreground">Permit Compliance - Coming Soon</div>}
-            {activeTab === 'permit-enforcement' && <div className="text-muted-foreground">Permit Enforcement - Coming Soon</div>}
-            {activeTab === 'permit-renewal' && <div className="text-muted-foreground">Permit Renewal - Coming Soon</div>}
-            {activeTab === 'permit-surrender' && <div className="text-muted-foreground">Permit Surrender - Coming Soon</div>}
-            {activeTab === 'permit-transfer' && <div className="text-muted-foreground">Permit Transfer - Coming Soon</div>}
+            {/* Assessment submenu views with Registry + Compliance review sections */}
+            {activeTab === 'intent-reviews' && <IntentRegistrationComplianceReview />}
+            {activeTab === 'permit-amalgamation' && <PermitAmalgamationComplianceReview />}
+            {activeTab === 'permit-amendments' && <PermitAmendmentComplianceReview />}
+            {activeTab === 'permit-compliance' && <PermitComplianceReportReview />}
+            {activeTab === 'permit-enforcement' && <PermitEnforcementComplianceReview />}
+            {activeTab === 'permit-renewal' && <PermitRenewalComplianceReview />}
+            {activeTab === 'permit-surrender' && <PermitSurrenderComplianceReview />}
+            {activeTab === 'permit-transfer' && <PermitTransferComplianceReview />}
           </main>
         </div>
       </div>
