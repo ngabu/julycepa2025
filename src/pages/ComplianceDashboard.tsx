@@ -50,11 +50,20 @@ const ComplianceDashboardView = () => {
 
           <main className="flex-1 p-6 overflow-auto">
             {activeTab === 'dashboard' && <EnvironmentAssessmentDashboard isManager={isManager} />}
-            {activeTab === 'applications' && <ComplianceApplicationsList />}
+            {activeTab === 'permit-applications' && <ComplianceApplicationsList />}
             {activeTab === 'team' && isManager && <TeamManagement />}
             {activeTab === 'reports' && <ComplianceReports />}
             {activeTab === 'profile' && <ProfileSettings />}
             {activeTab === 'settings' && <AppSettings />}
+            {/* Placeholder views for new assessment submenus */}
+            {activeTab === 'intent-reviews' && <div className="text-muted-foreground">Intent Application Review - Coming Soon</div>}
+            {activeTab === 'permit-amalgamation' && <div className="text-muted-foreground">Permit Amalgamation - Coming Soon</div>}
+            {activeTab === 'permit-amendments' && <div className="text-muted-foreground">Permit Amendments - Coming Soon</div>}
+            {activeTab === 'permit-compliance' && <div className="text-muted-foreground">Permit Compliance - Coming Soon</div>}
+            {activeTab === 'permit-enforcement' && <div className="text-muted-foreground">Permit Enforcement - Coming Soon</div>}
+            {activeTab === 'permit-renewal' && <div className="text-muted-foreground">Permit Renewal - Coming Soon</div>}
+            {activeTab === 'permit-surrender' && <div className="text-muted-foreground">Permit Surrender - Coming Soon</div>}
+            {activeTab === 'permit-transfer' && <div className="text-muted-foreground">Permit Transfer - Coming Soon</div>}
           </main>
         </div>
       </div>
