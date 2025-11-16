@@ -18,6 +18,7 @@ import { PermitAmendmentComplianceReview } from "@/components/compliance/PermitA
 import { PermitAmalgamationComplianceReview } from "@/components/compliance/PermitAmalgamationComplianceReview";
 import { PermitComplianceReportReview } from "@/components/compliance/PermitComplianceReportReview";
 import { PermitEnforcementComplianceReview } from "@/components/compliance/PermitEnforcementComplianceReview";
+import { InspectionsManagement } from "@/components/compliance/InspectionsManagement";
 import { Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -58,6 +59,7 @@ const ComplianceDashboardView = () => {
 
           <main className="flex-1 p-6 overflow-auto">
             {activeTab === 'dashboard' && <EnvironmentAssessmentDashboard isManager={isManager} />}
+            {activeTab === 'inspections' && <InspectionsManagement />}
             {activeTab === 'permit-applications' && <ComplianceApplicationsList />}
             {activeTab === 'team' && isManager && <TeamManagement />}
             {activeTab === 'reports' && <ComplianceReports />}
